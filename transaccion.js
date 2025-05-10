@@ -18,8 +18,6 @@ function transaccion(valorPesos) {
                 Salida: valorDolares,
                 Fecha: new Date().toLocaleString()
             });
-            //Con cada ciclo se muestra la actualización del historial por consola.
-            console.log("Historial actualizado:", history);
 }
 
 do {
@@ -32,6 +30,7 @@ do {
             //Control para que no se ingresen montos negativos.
             if(valorPesos > 0){
                 transaccion(valorPesos);
+                
             }
             else{
                 alert("Monto inválido.");
@@ -47,3 +46,6 @@ do {
             break;
     }
 } while (mensaje !== "2");
+
+//Se muestran el historial de los cambios de divisa en pantalla.
+console.log("Historial de cambios:", history);
