@@ -10,19 +10,19 @@ do {
     switch (mensaje) {
         case "1":
             valorPesos = parseInt(prompt("Ingrese el valor de la transacción en pesos"));
-            valorDolares = transaccion(valorPesos).toFixed(2); 
+            valorDolares = transaccion(valorPesos).toFixed(2);
             alert("El valor en dólares es: $" + valorDolares);
             history.push({
                 pesos: valorPesos,
                 dolares: valorDolares
             });
-            console.log("Historial actualizado:", history); 
+            console.log("Historial actualizado:", history);
             break;
         case "2":
             alert("Gracias por usar el sistema");
             break;
         default:
-            console.log("Opción no válida");
+            alert("Opción no válida");
             break;
     }
 } while (mensaje !== "2");
