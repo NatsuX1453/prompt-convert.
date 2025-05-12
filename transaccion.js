@@ -1,5 +1,5 @@
 function convert_Currency(valorPesos) {
-    let valorDolares=(valorPesos/1175);
+    let valorDolares=(valorPesos/1300);
     return valorDolares;
 }
 let valorPesos;
@@ -13,8 +13,10 @@ do {
             valorDolares = convert_Currency(valorPesos).toFixed(2);
             alert("El valor en dólares es: $" + valorDolares);
             history.push({
-                pesos: valorPesos,
-                dolares: valorDolares
+                Tipo: "Divisa",
+                Entrada: valorPesos,
+                Salida: valorDolares,
+                Fecha: new Date().toLocaleString()
             });
             console.log("Historial actualizado:", history);
             break;
