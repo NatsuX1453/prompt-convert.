@@ -1,4 +1,4 @@
-function transaccion(valorPesos) {
+function convert_Currency(valorPesos) {
     let valorDolares=(valorPesos/1175);
     return valorDolares;
 }
@@ -10,7 +10,7 @@ do {
     switch (mensaje) {
         case "1":
             valorPesos = parseInt(prompt("Ingrese el valor de la transacción en pesos"));
-            valorDolares = transaccion(valorPesos).toFixed(2);
+            valorDolares = convert_Currency(valorPesos).toFixed(2);
             alert("El valor en dólares es: $" + valorDolares);
             history.push({
                 pesos: valorPesos,
